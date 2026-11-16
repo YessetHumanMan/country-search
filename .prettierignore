@@ -1,5 +1,7 @@
 node_modules/
 dist/
+_site/
+.netlify/
 coverage/
 package-lock.json
 .husky/_/

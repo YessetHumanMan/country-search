@@ -3,6 +3,9 @@
 Учебное приложение для живого поиска стран через [countries.dev](https://countries.dev).
 TypeScript, DOM API, fetch, AbortController и Vitest; без фреймворков и бандлера.
 
+**[Открыть приложение](https://yessethumanman-country-search.netlify.app)** ·
+[Pull Request](https://github.com/YessetHumanMan/country-search/pull/1)
+
 - [Архитектура и обоснование решений](./DESIGN.md)
 - [Инструкция по деплою и сдаче](./SUBMISSION.md)
 - [Шаблон описания PR](./.github/pull_request_template.md)
@@ -38,6 +41,7 @@ npm test
 npm run build
 ```
 
+- `npm run build:site` — подготовка `_site/` для статического хостинга.
 - `npm run format` — форматирование.
 - `npm run test:watch` — тесты в watch-режиме.
 - `pre-commit` — только lint-staged (ESLint и Prettier).

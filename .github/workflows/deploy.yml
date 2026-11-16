@@ -33,19 +33,15 @@ jobs:
         run: npm run format:check
       - name: Run tests
         run: npm test
-      - name: Build
-        run: npm run build
-      - name: Prepare static site
-        run: |
-          mkdir -p _site/dist
-          cp index.html styles.css _site/
-          cp -R dist/. _site/dist/
+      - name: Build static site
+        run: npm run build:site
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
   deploy:
+    if: ${{ vars.ENABLE_GITHUB_PAGES == 'true' }}
     needs: build
     runs-on: ubuntu-latest
     permissions:

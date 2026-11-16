@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "build:site": "npm run build && node scripts/prepareSite.ts",
     "dev": "tsc -p tsconfig.build.json --watch",
     "start": "http-server . -c-1",
     "lint": "eslint . && tsc --noEmit",
