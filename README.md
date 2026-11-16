@@ -1,6 +1,23 @@
 # Country Search
 
-Учебное приложение для живого поиска стран через countries.dev.
+Учебное приложение для живого поиска стран через [countries.dev](https://countries.dev).
+TypeScript, DOM API, fetch, AbortController и Vitest; без фреймворков и бандлера.
+
+**[Открыть приложение](https://yessethumanman-country-search.netlify.app)** ·
+[Pull Request](https://github.com/YessetHumanMan/country-search/pull/1)
+
+- [Архитектура и обоснование решений](./DESIGN.md)
+- [Инструкция по деплою и сдаче](./SUBMISSION.md)
+- [Шаблон описания PR](./.github/pull_request_template.md)
+
+## Возможности
+
+- Живой поиск с debounce 300 мс и немедленной отменой устаревших запросов.
+- Таймаут 10 секунд, отдельная обработка отмены, 404 и настоящих ошибок.
+- Карточки и подробная информация о стране в диалоге.
+- Повтор последнего запроса, очистка поля и адаптивная верстка.
+
+Кэш, дедупликация и история поиска (бонусы задания) пока не реализованы.
 
 ## Разработка
 
@@ -24,6 +41,7 @@ npm test
 npm run build
 ```
 
+- `npm run build:site` — подготовка `_site/` для статического хостинга.
 - `npm run format` — форматирование.
 - `npm run test:watch` — тесты в watch-режиме.
 - `pre-commit` — только lint-staged (ESLint и Prettier).
